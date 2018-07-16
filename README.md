@@ -9,6 +9,15 @@ mongod --dbpath c:\data\db
 Start up NodeMon for quick updates to app (it monitors server updates
 nodemon app.js
 
+To Check and list Data in MongoDB
+mongo
+use authProj
+db.users.find()
+
+To find help for data in MongoDB
+mongo
+help
+
 
 # Referencess
 
@@ -53,4 +62,5 @@ https://www.npmjs.com/package/connect-mongo
 - Still need some time to figure out authentication portion
 
 16/07/2018
-- 
+- The default mongoDB port is TCP 27017
+- The way to delete data manually is via db.users.deleteOne({key value pair}) or db.users.deleteMany({key value pair})
