@@ -6,7 +6,7 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
 // connect to MongoDB
-mongoose.connect('mongodb://localhost/authProj');
+mongoose.connect('mongodb://localhost:27017/authProj', {useNewUrlParser: true});
 var db = mongoose.connection;
 
 //handle mongo error
@@ -14,7 +14,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
   // we're connected!
 });
-
+ 
 //use sessions for tracking logins
 app.use(session({
   secret: 'journal now',
@@ -37,7 +37,7 @@ var routes = require('./routes/router');
 app.use('/', routes);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   var err = new Error('File Not Found');
   err.status = 404;
   next(err);
@@ -45,7 +45,7 @@ app.use(function(req, res, next) {
 
 // error handler
 // define as the last app.use callback
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.send(err.message);
 });

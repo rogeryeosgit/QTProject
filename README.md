@@ -50,4 +50,7 @@ https://www.npmjs.com/package/connect-mongo
 - in order to see MongoDB data "use authProj", followed by "db.users.find()" or "db.sessions.find()" where users / sessions are collections within the db.
 
 06/07/2018
-- Still some time to figure out authentication portion
+- Still need some time to figure out authentication portion
+
+16/07/2018
+- 
