@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var User = require('../db/schema');
+var User = require('../db/User');
 
 // GET /
 router.get('/', function (req, res, next) {
@@ -26,7 +26,6 @@ router.post('/', function (req, res, next) {
       email: req.body.email,
       username: req.body.username,
       password: req.body.password,
-      // passwordConf: req.body.passwordConf,
     }
 
     User.create(userData, function (error, user) {
