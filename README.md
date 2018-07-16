@@ -66,3 +66,4 @@ https://www.npmjs.com/package/connect-mongo
 - The way to delete data manually is via db.users.deleteOne({key value pair}) or db.users.deleteMany({key value pair})
 - Mongoose gives an automatic versioning "__v", disable via versionKey: false
 - Express has an inbuilt mechanism to handle errors
+- Starting to try out Vue and integrating it into project. (MEVN)
