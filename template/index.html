@@ -1,12 +1,18 @@
 <html>
 
 <head>
-
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
-    <h1>Testing Login Authentication</h1>
-
+    <div id="init">
+        <div class="mainSplash">
+            <img v-bind:src="image">
+        </div>
+        <h1>Testing Login Authentication {{ header }} </h1>
+        <p>{{ description }}</p>
+    </div>
     <h3>Register</h3>
     <form action="/" method="post">
         <input type="text" name="email" placeholder="E-mail" required="">
@@ -21,5 +27,9 @@
         <input type="password" name="logpassword" placeholder="Password" required="">
         <input type="submit" value="LOGIN NOW">
     </form>
+
+    <script src='index.js'></script>
+
 </body>
+
 </html>

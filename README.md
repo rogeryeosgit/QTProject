@@ -39,6 +39,9 @@ http://mongoosejs.com/docs/#
 Connect Mongo Docs
 https://www.npmjs.com/package/connect-mongo
 
+Learning Vue via some videos here
+https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
+
 
 # Learning Experience
 
@@ -67,3 +70,5 @@ https://www.npmjs.com/package/connect-mongo
 - Mongoose gives an automatic versioning "__v", disable via versionKey: false
 - Express has an inbuilt mechanism to handle errors
 - Starting to try out Vue and integrating it into project. (MEVN)
+- Script of Vue needs to come after html code to dynamically change it
+- learnt about v-bind. can just be replaced with ":xxxx". Having some problems adding in CSS while still using vue
