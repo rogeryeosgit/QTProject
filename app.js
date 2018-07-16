@@ -47,7 +47,7 @@ app.use(function (req, res, next) {
 // define as the last app.use callback
 app.use(function (err, req, res, next) {
   res.status(err.status || 500);
-  res.send(err.message);
+  res.send('<head><meta http-equiv="refresh" content="3"></head><body><h1>Redirecting in 3 seconds...</h1><br>' + err.message + "</body>");
 });
 
 // listen on port 3000
