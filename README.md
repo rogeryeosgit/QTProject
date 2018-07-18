@@ -75,9 +75,9 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 
 18/07/2018
 - v-if, v-else-if and v-else. v-if shows when its boolean true in the data object
-- v-show toggles
+- v-show toggles. Reactive if combined with a few other directives.
 - v-for directive loops through array to make a list with <li> tag
 - v-on for events, listen for clicks -> "click", can use "@" and "mouseover"
 - style bindings using v-bind can change styles on the fly
-- computed property is cached. Use dependancies to compute 'return' value
-- 
+- computed property is cached. Uses dependancies to compute 'return' value. Wheras methods can be called frequently, compute just stays calculated on the fly
+- Creating Vue components includes Props, Templates and Data methods (returning data objects) --> this causes it to create new data rather then tapping one a single data object

@@ -1,22 +1,12 @@
 <html>
 
 <head>
-    <script src="https://unpkg.com/vue"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
     <div id="init">
-        <div class="mainSplash">
-            <img v-show="showPic" :src="image" />
-        </div>
-        <h1>Testing Login Authentication
-            <a :href="goThere">{{ header }}</a>
-        </h1>
-        <p>{{ description }}
-            <br> you may wonder why I want to do this, its just for <p v-for="why in whys">{{ why }}</p>
-        </p>
-        <button @click="triggerPic">Show Picture or Not</button>
+        <Description></Description>
     </div>
     <h3>Register</h3>
     <form action="/" method="post">
@@ -33,6 +23,7 @@
         <input type="submit" value="LOGIN NOW">
     </form>
 
+    <script src="https://unpkg.com/vue"></script>
     <script src='index.js'></script>
 
 </body>
