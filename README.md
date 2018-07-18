@@ -81,3 +81,7 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - style bindings using v-bind can change styles on the fly
 - computed property is cached. Uses dependancies to compute 'return' value. Wheras methods can be called frequently, compute just stays calculated on the fly
 - Creating Vue components includes Props, Templates and Data methods (returning data objects) --> this causes it to create new data rather then tapping one a single data object
+- For templates in Components use "`" instead of "'"
+- Props in components allow people to access components from beyond the component
+- this.$emit produces an event from the component that the actual HTML code can pick up via v-on directive.
+- v-model does 2 way data binding, changes the data in the Vue instance
