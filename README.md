@@ -72,3 +72,12 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - Starting to try out Vue and integrating it into project. (MEVN)
 - Script of Vue needs to come after html code to dynamically change it
 - learnt about v-bind. can just be replaced with ":xxxx". Having some problems adding in CSS while still using vue
+
+18/07/2018
+- v-if, v-else-if and v-else. v-if shows when its boolean true in the data object
+- v-show toggles
+- v-for directive loops through array to make a list with <li> tag
+- v-on for events, listen for clicks -> "click", can use "@" and "mouseover"
+- style bindings using v-bind can change styles on the fly
+- computed property is cached. Use dependancies to compute 'return' value
+- 
