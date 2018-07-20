@@ -96,3 +96,4 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - All these while putting together key pairs. AWS CLI. Roles. IAM. Found stuff automagically uploaded onto S3.
 - Killed myself (Reminder to check bill)
 - Decided to go with plain old heroku. Set it up in 20 mins. What a waste of my day.
+- Only consideration with using Heroku is that, free regions are only in US/EU. Preferred Singapore region. Perhaps not an issue now.
