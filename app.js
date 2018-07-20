@@ -50,7 +50,9 @@ app.use(function (err, req, res, next) {
   res.send('<head><meta http-equiv="refresh" content="3"></head><body><h1>Redirecting in 3 seconds...</h1><br>' + err.message + "</body>");
 });
 
+module.exports = app;
+
 // listen on port 3000
-app.listen(3000, function () {
-  console.log('Express app listening on port 3000');
-});
+// app.listen(3000, function () {
+//   console.log('Express app listening on port 3000');
+// });
