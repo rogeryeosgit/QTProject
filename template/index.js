@@ -8,7 +8,7 @@ Vue.component('Description', {          // Vue Component
     </div>`,
     data() {
         return {
-            header: 'with Vue',
+            header: 'with Vue 2',
             description: 'Using Vue in a Authentication Tutorial',
             image: './assets/splashImage.jpg',
             goThere: 'https://vuejs.org/',

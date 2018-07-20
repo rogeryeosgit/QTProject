@@ -85,3 +85,14 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - Props in components allow people to access components from beyond the component
 - this.$emit produces an event from the component that the actual HTML code can pick up via v-on directive.
 - v-model does 2 way data binding, changes the data in the Vue instance
+
+20/07/2018
+- Had much frustration trying to deploy onto AWS. 
+- Tried AWS CodePipeline for a "quick" deployment and I had to set up AWS CodeDeploy, AWS CodeBuild
+- Grappled with YAML files, no success. Needed that for CodeDeploy and CodePipeline
+- Tried to be smart to work on deploying app on Serverless with AWS Lambda and API Gateway, no success.
+- Decided to fall back on plain ole EC2. Tried to be smart again and grappled with figuring out EBS. Then tried to auto deploy with CodeDeploy again. 
+- Spun up EC2 instances for load balancing. Stuck on YAML AGAIN!!!
+- All these while putting together key pairs. AWS CLI. Roles. IAM. Found stuff automagically uploaded onto S3.
+- Killed myself (Reminder to check bill)
+- Decided to go with plain old heroku. Set it up in 20 mins. What a waste of my day.
