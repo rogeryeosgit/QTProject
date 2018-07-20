@@ -6,7 +6,8 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
 // connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/authProj', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost:27017/authProj', {useNewUrlParser: true}); ?retryWrites=true
+mongoose.connect('mongodb+srv://devoappaccess:vGWhWWtRPR0bgqP0@firstcluster-xno0w.mongodb.net/authProj', {useNewUrlParser: true});
 var db = mongoose.connection;
 
 //handle mongo error
@@ -50,9 +51,9 @@ app.use(function (err, req, res, next) {
   res.send('<head><meta http-equiv="refresh" content="3"></head><body><h1>Redirecting in 3 seconds...</h1><br>' + err.message + "</body>");
 });
 
-module.exports = app;
-
 // listen on port 3000
 // app.listen(3000, function () {
 //   console.log('Express app listening on port 3000');
 // });
+
+module.exports = app;
