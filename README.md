@@ -97,3 +97,8 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - Killed myself (Reminder to check bill)
 - Decided to go with plain old heroku. Set it up in 20 mins. What a waste of my day.
 - Only consideration with using Heroku is that, free regions are only in US/EU. Preferred Singapore region. Perhaps not an issue now.
+
+30/07/2018
+- Familarizing myself with MongoDB Atlas. local db increases in size. Asked for understanding.
+- Mongoose uses a pool of connections to manage connection to Mongodb
+- Figuring out how to get a static ip
