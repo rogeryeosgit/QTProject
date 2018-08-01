@@ -102,3 +102,6 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - Familarizing myself with MongoDB Atlas. local db increases in size. Asked for understanding.
 - Mongoose uses a pool of connections to manage connection to Mongodb
 - Figuring out how to get a static ip
+
+01/08/2018
+- Set up a static ip and learnt to connect to db from it

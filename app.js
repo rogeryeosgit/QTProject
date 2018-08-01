@@ -6,7 +6,7 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
 // connect to MongoDB
-// mongoose.connect('mongodb://localhost:27017/authProj', {useNewUrlParser: true}); ?retryWrites=true
+// mongoose.connect('mongodb://localhost:27017/authProj', {useNewUrlParser: true}); // For local access
 mongoose.connect('mongodb+srv://devoappaccess:vGWhWWtRPR0bgqP0@firstcluster-xno0w.mongodb.net/authProj', {useNewUrlParser: true});
 var db = mongoose.connection;
 
