@@ -104,4 +104,7 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - Figuring out how to get a static ip
 
 01/08/2018
-- Set up a static ip and learnt to connect to db from it
+- Set up a static ip and learnt to connect to db from it but to no avail. Turns out Mongoose does not seem to allow modifications of http protocols out of the box.
+
+09/08/2018
+- Learning Passport.js
