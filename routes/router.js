@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../db/User');
+var passport = require('../routes/strategies')
 
 // GET /
 router.get('/', function (req, res, next) {
