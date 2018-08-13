@@ -13,6 +13,7 @@ passport.use(new GoogleStrategy({
 },
     function (accessToken, refreshToken, profile, done) {
         console.log(profile.id);
+        return done(err,user);
         // User.findOrCreate({ googleId: profile.id }, function (err, user) {
         //     return done(err, user);
         // });

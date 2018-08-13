@@ -114,3 +114,4 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 13/08/2018
 - Realized I could export more then one module in a single js file
 - callbacks from google APIs need to be identical to call back properties in app file
+- Don't mess up which console you are printing to. It can be time wasting.
