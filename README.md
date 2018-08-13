@@ -1,3 +1,5 @@
+**__To Be Exported to Learning Journey journal__**
+
 # Local Set Up
 
 Installing new node packages and updating package.json at the same time
@@ -108,3 +110,7 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 
 09/08/2018
 - Learning Passport.js
+
+13/08/2018
+- Realized I could export more then one module in a single js file
+- callbacks from google APIs need to be identical to call back properties in app file
