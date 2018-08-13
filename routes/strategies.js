@@ -9,13 +9,13 @@ passport.use(new GoogleStrategy({
     clientID: '211325641937-lv80h7unjk3v2efi7i16rpgch9985ji5.apps.googleusercontent.com',
     clientSecret: 'EzLN_YyAiBX8uGg2fz27tiKb',
     callbackURL: "http://qt.navigators.tech/auth/google/callback"
-  },
-  function(accessToken, refreshToken, profile, done) {
-       User.findOrCreate({ googleId: profile.id }, function (err, user) {
-        console.log("Test!");
-         return done(err, user);
-       });
-  }
-  ));
+},
+    function (accessToken, refreshToken, profile, done) {
+        User.findOrCreate({ googleId: profile.id }, function (err, user) {
+            console.log("Test!");
+            return done(err, user);
+        });
+    }
+));
 
-  module.exports = passport;
+module.exports = passport;
