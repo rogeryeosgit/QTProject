@@ -15,7 +15,7 @@ router.post('/', function (req, res, next) {
     var err = new Error('Passwords do not match.');
     err.status = 400;
     //res.send("passwords dont match");
-    return next(err); 
+    return next(err);
   }
 
   if (req.body.email &&
@@ -33,7 +33,7 @@ router.post('/', function (req, res, next) {
       if (error) {
         return next(error);
       } else {
-        req.session.userId = user._id;   
+        req.session.userId = user._id;
         return res.redirect('/profile');
       }
     });
@@ -95,16 +95,21 @@ router.get('/logout', function (req, res, next) {
 //   redirecting the user to google.com.  After authorization, Google
 //   will redirect the user back to this application at /auth/google/callback
 router.get('/auth/google',
-  passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
+  passport.authenticate('google', {
+    scope: [
+      'https://www.googleapis.com/auth/userinfo.profile',
+      'https://www.googleapis.com/auth/userinfo.email'
+    ]
+  }));
 
 // GET /auth/google/callback
 //   Use passport.authenticate() as route middleware to authenticate the
 //   request.  If authentication fails, the user will be redirected back to the
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
-router.get('/auth/google/callback', 
+router.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
-  function(req, res) {
+  function (req, res) {
     console.log("Comes here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     res.redirect('/profile');
   });
