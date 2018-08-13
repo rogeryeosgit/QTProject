@@ -21,9 +21,10 @@ passport.use(new GoogleStrategy({
             googleEmail: profile.emails[0].value,
             googleName: profile.displayName,
             googleId: profile.id
-        }, function (err, user) {
-            return done(err, user);
-        });
+        },
+            function (err, user) {
+                return done(err, user);
+            });
     }
 ));
 
