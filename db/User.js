@@ -54,7 +54,7 @@ UserSchema.pre('save', function (next) {
 });
 
 // Implicitely using id from google as password
-UserSchema.statics.findOrCreate = function (gDAta, callback) {
+UserSchema.statics.findOrCreate = function (gData, callback) {
   User.findOne({ email: gData.googleEmail })
     .exec(function (err, user) {
       if (err) {
