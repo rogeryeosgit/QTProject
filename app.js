@@ -4,6 +4,7 @@ var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
+var passport = require('passport')
 
 // connect to MongoDB
 // mongoose.connect('mongodb://localhost:27017/authProj', {useNewUrlParser: true}); // For local access
@@ -50,6 +51,10 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.send('<head><meta http-equiv="refresh" content="3"></head><body><h1>Redirecting in 3 seconds...</h1><br>' + err.message + "</body>");
 });
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // listen on port 3000
 // app.listen(3000, function () {
