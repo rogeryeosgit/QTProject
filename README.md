@@ -115,3 +115,6 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - Realized I could export more then one module in a single js file
 - callbacks from google APIs need to be identical to call back properties in app file
 - Don't mess up which console you are printing to. It can be time wasting.
+- After authentication with google OAuth2, to save copy of profile into MongoDB db to track what data is entered by user. 
+- Somehow my app.js is not loading up MongoDB related stuff when I login via google. Gets stuck. Need to figure out what triggers certain things in app.js
+- How to make 2 different kinds of logins work together
