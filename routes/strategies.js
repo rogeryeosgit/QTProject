@@ -12,7 +12,7 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, done) {
        User.findOrCreate({ googleId: profile.id }, function (err, user) {
-        console.log(user);
+        console.log("Test!");
          return done(err, user);
        });
   }
