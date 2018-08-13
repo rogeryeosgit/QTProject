@@ -12,14 +12,18 @@ passport.use(new GoogleStrategy({
     callbackURL: "http://qt.navigators.tech/auth/google/callback"
 },
     function (accessToken, refreshToken, profile, done) {
-        console.log(profile.id);
-        console.log("Email : " + profile.emails[0].value);
-        console.log("Display Name : " + profile.displayName);
-        
-        return done(err,user);
-        // User.findOrCreate({ googleId: profile.id }, function (err, user) {
-        //     return done(err, user);
-        // });
+        // console.log(profile.id);
+        // console.log("Email : " + profile.emails[0].value);
+        // console.log("Display Name : " + profile.displayName);
+
+        // return done(err,user);
+        User.findOrCreate({
+            googleEmail: profile.emails[0].value,
+            googleName: profile.displayName,
+            googleId: profile.id
+        }, function (err, user) {
+            return done(err, user);
+        });
     }
 ));
 
