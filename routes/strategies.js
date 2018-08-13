@@ -12,13 +12,10 @@ passport.use(new GoogleStrategy({
     callbackURL: "http://qt.navigators.tech/auth/google/callback"
 },
     function (accessToken, refreshToken, profile, done) {
-        Console.log(profile.id);
-
-        /*        User.findOrCreate({ 
-            Console.log(profile.id);
-        }, function (err, user) {
-            return done(err, user);
-        }); */
+        console.log(profile.id);
+        // User.findOrCreate({ googleId: profile.id }, function (err, user) {
+        //     return done(err, user);
+        // });
     }
 ));
 
