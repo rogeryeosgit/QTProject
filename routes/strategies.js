@@ -13,9 +13,9 @@ passport.use(new GoogleStrategy({
 },
     function (accessToken, refreshToken, profile, done) {
         User.findOrCreate({
-            googleEmail: profile.emails[0].value,
-            googleName: profile.displayName,
-            googleId: profile.id
+            email: profile.emails[0].value,
+            username: profile.displayName,
+            password: profile.id
         },
             function (err, user) {
                 return done(err, user);
