@@ -54,25 +54,16 @@ UserSchema.pre('save', function (next) {
 });
 
 // Implicitely using id from google as password
-UserSchema.statics.findOrCreate = function (gData, callback) {
+UserSchema.statics.findInDB = function (gData, callback) {
   console.log("Here : " + gData.email);
   User.findOne({ email: gData.email })
     .exec(function (err, user) {
       if (err) {
-        console.log("Error 1");
         return callback(err)
       } else if (!user) {
-        console.log("Error 2");
-        User.create(gData, function (error, user) {
-          console.log("Error 2.5");
-          if (error) {
-            console.log("Error 3");
-            return callback(error);
-          } else {
-            console.log("Error 4");
-            return callback(null, user);
-          }
-        });
+        var err = new Error('User not found.');
+        err.status = 401;
+        return callback(err);
       }
       return callback(null,user); // Found the user in the database
     });

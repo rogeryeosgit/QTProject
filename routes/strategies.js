@@ -12,13 +12,22 @@ passport.use(new GoogleStrategy({
     callbackURL: "http://qt.navigators.tech/auth/google/callback"
 },
     function (accessToken, refreshToken, profile, done) {
-        User.findOrCreate({
+
+        var userData = {
             email: profile.emails[0].value,
             username: profile.displayName,
             password: profile.id
-        },
-            function (err, user) {
-                console.log("Is DONE called?")
+        }
+        User.findInDB(userData, function (err, user) {
+                console.log("Is DONE called?");
+                if (err.message === 'User not found.') {
+                    User.create(userData, function (error, user) {
+                        if (error) {
+                            return done(err);
+                        }
+                        return done(err, user);
+                    });
+                }
                 return done(err, user);
             }
         );
@@ -33,6 +42,6 @@ passport.deserializeUser(function (id, done) {
     User.findById(id, function (err, user) {
         done(err, user);
     });
-}); 
+});
 
 module.exports = passport;
