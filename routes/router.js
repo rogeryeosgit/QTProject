@@ -112,7 +112,7 @@ router.get('/auth/google/callback',
     failureRedirect: '/'
   }),
   function (req, res) {
-    console.log("Comes here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    console.log(" *--- Google Login Successful ---* ")
     res.redirect('/profile');
   });
 
