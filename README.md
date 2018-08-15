@@ -124,3 +124,4 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - can't seem to change my User.js filename to lowercase, unsure why. Maybe user is a reserved name.
 - Needed to copy user id to session to persist session information
 - Mongoose methods need to be called one at a time and not nested, otherwise unintended returns might happen
+- Find in DB still has some problems creating, clean up properly function to check and create in DB.
