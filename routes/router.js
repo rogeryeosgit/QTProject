@@ -108,7 +108,9 @@ router.get('/auth/google',
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
 router.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: '/' }),
+  passport.authenticate('google', {
+    failureRedirect: '/profile'
+  }),
   function (req, res) {
     console.log("Comes here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     req.session.userId = user._id; // See how this session thing works
