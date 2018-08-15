@@ -21,16 +21,17 @@ passport.use(new GoogleStrategy({
         User.findInDB(userData, function (err, user) {
                 console.log("Is DONE called?");
                 if (err.message === 'User not found.') {
+                    console.log("Was it here?");
                     User.create(userData, function (error, user) {
                         if (error) {
                             return done(err);
                         }
+                        console.log("Did it get here?");
                         return done(err, user);
                     });
                 }
                 return done(err, user);
-            }
-        );
+            });
     }
 ));
 
