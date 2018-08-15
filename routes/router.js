@@ -113,7 +113,6 @@ router.get('/auth/google/callback',
   }),
   function (req, res) {
     console.log("Comes here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    req.session.userId = user._id; // See how this session thing works
     res.redirect('/profile');
   });
 
