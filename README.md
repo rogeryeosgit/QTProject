@@ -118,3 +118,6 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - After authentication with google OAuth2, to save copy of profile into MongoDB db to track what data is entered by user. 
 - Somehow my app.js is not loading up MongoDB related stuff when I login via google. Gets stuck. Need to figure out what triggers certain things in app.js
 - How to make 2 different kinds of logins work together
+
+15/08/2018
+- Extracting Mongoose connection from app deployed on Node

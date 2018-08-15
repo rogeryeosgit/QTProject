@@ -1,21 +1,10 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
-var mongoose = require('mongoose')
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var passport = require('passport')
-
-// connect to MongoDB
-// mongoose.connect('mongodb://localhost:27017/authProj', {useNewUrlParser: true}); // For local access
-mongoose.connect('mongodb+srv://devoappaccess:vGWhWWtRPR0bgqP0@firstcluster-xno0w.mongodb.net/authProj', {useNewUrlParser: true});
-var db = mongoose.connection;
-
-//handle mongo error
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-  // we're connected!
-});
+var db = require('../db/db-connector')
  
 //use sessions for tracking logins
 app.use(session({
