@@ -5,7 +5,7 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var passport = require('passport')
 var db = require('./db/db-connector')
- 
+
 //use sessions for tracking logins
 app.use(session({
   secret: 'journal now',
@@ -15,6 +15,9 @@ app.use(session({
     mongooseConnection: db
   })
 }));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // parse incoming requests
 app.use(bodyParser.json());
@@ -40,10 +43,6 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.send('<head><meta http-equiv="refresh" content="3;url=http://qt.navigators.tech"></head><body><h1>Redirecting you back to login in 3 seconds...</h1><br>' + err.message + "</body>");
 });
-
-app.use(passport.initialize());
-app.use(passport.session());
-
 
 // listen on port 3000
 // app.listen(3000, function () {
