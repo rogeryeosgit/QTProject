@@ -59,12 +59,16 @@ UserSchema.statics.findOrCreate = function (gData, callback) {
   User.findOne({ email: gData.email })
     .exec(function (err, user) {
       if (err) {
+        console.log("Error 1");
         return callback(err)
       } else if (!user) {
+        console.log("Error 2");
         User.create(gData, function (error, user) {
           if (error) {
+            console.log("Error 3");
             return callback(error);
           } else {
+            console.log("Error 4");
             return callback(null, user);
           }
         });
