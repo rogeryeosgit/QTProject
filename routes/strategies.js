@@ -31,7 +31,7 @@ passport.serializeUser(function (user, done) {
 
 passport.deserializeUser(function (id, done) {
     User.findById(id, function (err, user) {
-        console.log("Figuring out when this is called 1");
+        console.log("Figuring out when this is called 2");
         done(err, user);
     });
 }); 
