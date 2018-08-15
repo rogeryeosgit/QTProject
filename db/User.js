@@ -69,6 +69,7 @@ UserSchema.statics.findOrCreate = function (gData, callback) {
           }
         });
       }
+      return callback(null,user); // Found the user in the database
     });
 }
 
