@@ -70,6 +70,13 @@ UserSchema.statics.findOrCreate = function (gData, callback) {
         });
       }
     });
+  User.create(gData, function (error, user) {
+    if (error) {
+      return next(error);
+    } else {
+      return callback(error, user)
+    }
+  });
 }
 
 var User = mongoose.model('User', UserSchema);

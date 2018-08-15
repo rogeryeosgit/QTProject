@@ -121,3 +121,5 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 
 15/08/2018
 - Extracting Mongoose connection from app deployed on Node
+- can't seem to change my User.js filename to lowercase, unsure why. Maybe user is a reserved name.
+- 
