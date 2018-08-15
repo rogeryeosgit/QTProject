@@ -18,6 +18,7 @@ passport.use(new GoogleStrategy({
             password: profile.id
         },
             function (err, user) {
+                console.log("Is DONE called?")
                 return done(err, user);
             }
         );
@@ -25,13 +26,11 @@ passport.use(new GoogleStrategy({
 ));
 
 passport.serializeUser(function (user, done) {
-    console.log("Figuring out when this is called 1");
     done(null, user.id);
 });
 
 passport.deserializeUser(function (id, done) {
     User.findById(id, function (err, user) {
-        console.log("Figuring out when this is called 2");
         done(err, user);
     });
 }); 

@@ -113,6 +113,7 @@ router.get('/auth/google/callback',
   }),
   function (req, res) {
     console.log(" *--- Google Login Successful ---* ")
+    console.log("Session UserID : " + req.user.id);
     req.session.userId = req.user.id;
     res.redirect('/profile');
   });
