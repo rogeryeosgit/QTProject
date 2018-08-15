@@ -30,6 +30,7 @@ passport.use(new GoogleStrategy({
                         return done(err, user);
                     });
                 }
+                console.log("It got here right?");
                 return done(err, user);
             });
     }
