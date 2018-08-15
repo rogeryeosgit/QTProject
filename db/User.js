@@ -65,7 +65,7 @@ UserSchema.statics.findInDB = function (gData, callback) {
         err.status = 401;
         return callback(err);
       }
-      return callback('no error',user); // Found the user in the database
+      return callback(err,user); // Found the user in the database
     });
 }
 

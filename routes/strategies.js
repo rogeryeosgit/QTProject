@@ -19,7 +19,8 @@ passport.use(new GoogleStrategy({
             password: profile.id
         }
         User.findInDB(userData, function (err, user) {
-                console.log("Is DONE called?");
+            console.log("Is DONE called?");
+            if (err) {
                 if (err.message === 'User not found.') {
                     console.log("Was it here?");
                     User.create(userData, function (error, user) {
@@ -30,9 +31,10 @@ passport.use(new GoogleStrategy({
                         return done(err, user);
                     });
                 }
-                console.log("It got here right?");
-                return done(err, user);
-            });
+            }
+            console.log("It got here right?");
+            return done(err, user);
+        });
     }
 ));
 
