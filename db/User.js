@@ -64,6 +64,7 @@ UserSchema.statics.findOrCreate = function (gData, callback) {
       } else if (!user) {
         console.log("Error 2");
         User.create(gData, function (error, user) {
+          console.log("Error 2.5");
           if (error) {
             console.log("Error 3");
             return callback(error);
