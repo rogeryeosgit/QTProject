@@ -26,10 +26,10 @@ passport.use(new GoogleStrategy({
                     User.create(userData, function (error, user) {
                         if (error) {
                             console.log("Was there an error creating a new user?")
-                            return done(err);
+                            return done(error);
                         }
                         console.log("Did it get here?");
-                        return done(err, user);
+                        return done(error, user);
                     });
                 }
             } else {
