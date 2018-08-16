@@ -25,6 +25,7 @@ passport.use(new GoogleStrategy({
                     console.log("Was it here?");
                     User.create(userData, function (error, user) {
                         if (error) {
+                            console.log("Was there an error creating a new user?")
                             return done(err);
                         }
                         console.log("Did it get here?");
