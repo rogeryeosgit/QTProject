@@ -125,3 +125,9 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - Needed to copy user id to session to persist session information
 - Mongoose methods need to be called one at a time and not nested, otherwise unintended returns might happen
 - Find in DB still has some problems creating, clean up properly function to check and create in DB.
+
+16/08/2018
+- Fixed google auth. All done!
+- Meddled with the DB abit. Drop database by db.dropDatabase() after using it.
+- interesting that "unqiue" for MongoDB doesn't check for uniqueness initially. Workarounds https://mongoosejs.com/docs/faq.html#unique-doesnt-work
+- db.users.createIndex({"email":1}) manually create index for mongodb for email in ascending order
