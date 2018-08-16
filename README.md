@@ -131,3 +131,4 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - Meddled with the DB abit. Drop database by db.dropDatabase() after using it.
 - interesting that "unqiue" for MongoDB doesn't check for uniqueness initially. Workarounds https://mongoosejs.com/docs/faq.html#unique-doesnt-work
 - db.users.createIndex({"email":1}) manually create index for mongodb for email in ascending order
+- Having some problems getting MongoDB to recognize unique id as an email
