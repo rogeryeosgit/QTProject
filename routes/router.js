@@ -8,6 +8,10 @@ router.get('/', function (req, res, next) {
   return res.send('Set default template path!');
 });
 
+router.get('/register') {
+  return res.send("register.html")
+}
+
 //POST route for updating data
 router.post('/', function (req, res, next) {
   // confirm that user typed same password twice
