@@ -8,9 +8,9 @@ router.get('/', function (req, res, next) {
   return res.send('Set default template path!');
 });
 
-router.get('/register') {
-  return res.send("register.html")
-}
+router.get('/register', function (req, res, next) {
+  return res.send("register.html");
+});
 
 //POST route for updating data
 router.post('/', function (req, res, next) {
