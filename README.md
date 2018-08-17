@@ -137,3 +137,4 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - Had some help from https://docs.mongodb.com/manual/core/index-unique/ to solve unique indexes issue. Needs to set up at the start manually
 - Evaluating Vue UI to use
 - Trying out Quasar, installed Yarn
+- Trying out Shards
