@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/register', function (req, res, next) {
-  return res.send("register.html");
+  return res.redirect("register.html");
 });
 
 //POST route for updating data
