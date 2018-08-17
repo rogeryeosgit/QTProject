@@ -132,3 +132,8 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - interesting that "unqiue" for MongoDB doesn't check for uniqueness initially. Workarounds https://mongoosejs.com/docs/faq.html#unique-doesnt-work
 - db.users.createIndex({"email":1}) manually create index for mongodb for email in ascending order
 - Having some problems getting MongoDB to recognize unique id as an email
+
+17/08/2018
+- Had some help from https://docs.mongodb.com/manual/core/index-unique/ to solve unique indexes issue. Needs to set up at the start manually
+- Evaluating Vue UI to use
+- Trying out Quasar, installed Yarn
