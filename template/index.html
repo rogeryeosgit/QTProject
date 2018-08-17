@@ -2,14 +2,15 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="shards.min.css">
 </head>
 
 <body>
-    <div id="init">
-        <Description></Description>
-    </div>
+
+    <h1>QT App</h1>
+    
     <h3>Register</h3>
     <form action="/" method="post">
         <input type="text" name="email" placeholder="E-mail" required="">
@@ -24,8 +25,13 @@
         <input type="password" name="logpassword" placeholder="Password" required="">
         <input type="submit" value="LOGIN NOW">
     </form>
+    <a href="/auth/google">
+        <img src="assets/Google Sign In Buttons/btn_google_signin_light_normal_web@2x.png">
+    </a>
 
-    <a href="/auth/google">Sign In with Google</a>
+    <!-- <div id="init">
+        <Description></Description>
+    </div> -->
 
     <!-- <script src="https://unpkg.com/vue"></script>
     <script src='index.js'></script> -->
