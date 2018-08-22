@@ -1,4 +1,4 @@
-var axios = require('axios')
+var axios = require('axios');
 
 // var passage {
 //     bookname: string;
@@ -20,7 +20,5 @@ axios.get(BRUrl, params).then(data => console.log(data)).catch(error => console.
 
 
 // let dat = res.json();
-
-module.exports = passage
 
 
