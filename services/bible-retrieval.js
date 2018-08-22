@@ -16,7 +16,7 @@ const params = {
 }
 
 console.log("-- Starting BR Service -- ");
-axios.get(BRUrl, { headers: { header } }, params).then(data => console.log(data)).catch(error => console.log(error));
+axios.get(BRUrl, { headers: header }, params).then(data => console.log(data)).catch(error => console.log(error));
 console.log("-- Ending BR Service -- ");
 
 
