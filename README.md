@@ -141,4 +141,5 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 
 22/08/2018
 - Starting work on bible retrieval service
-- considering the data needs to be return via CORS, doing it via server
+- considering the data needs to be return via CORS, doing it via server and just sending over data
+- debugged authorization using Axios
