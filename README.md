@@ -138,3 +138,7 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - Evaluating Vue UI to use
 - Trying out Quasar, installed Yarn
 - Trying out Shards
+
+22/08/2018
+- Starting work on bible retrieval service
+- considering the data needs to be return via CORS, doing it via server
