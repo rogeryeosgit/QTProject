@@ -15,8 +15,9 @@ const params = {
     q: 'John+1'
 }
 
+console.log("-- Starting BR Service -- ");
 axios.get(BRUrl, params).then(data => console.log(data)).catch(error => console.log(error));
-
+console.log("-- Ending BR Service -- ");
 
 
 // let dat = res.json();
