@@ -1,3 +1,4 @@
+var enforce = require('heroku-ssl-redirect')
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
@@ -5,7 +6,9 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var passport = require('passport')
 var db = require('./db/db-connector')
-var enforce = require('heroku-ssl-redirect')
+
+// Enforcing SSL on website
+app.use(enforce());
 
 //use sessions for tracking logins
 app.use(session({
@@ -26,9 +29,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // serve static files from /html
 app.use(express.static(__dirname + '/template'));
-
-// Enforcing SSL on website
-app.use(enforce());
 
 // include routes
 var routes = require('./routes/router');
