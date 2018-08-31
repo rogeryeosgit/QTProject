@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/template'));
 
 // Enforcing SSL on website
-app.use(sslRedirect());
+app.use(enforce());
 
 // include routes
 var routes = require('./routes/router');
