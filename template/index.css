@@ -1,5 +1,6 @@
 #logincontainer {
-    margin: 10px;
+    display: block;
+    width: 100%;
 }
 
 .mainSplash {
