@@ -7,9 +7,9 @@ var User = require('../db/User');
 //   credentials (in this case, an accessToken, refreshToken, and Google
 //   profile), and invoke a callback with a user object.
 passport.use(new GoogleStrategy({
-    clientID: '211325641937-lv80h7unjk3v2efi7i16rpgch9985ji5.apps.googleusercontent.com',
-    clientSecret: 'EzLN_YyAiBX8uGg2fz27tiKb',
-    callbackURL: "http://qt.navigators.tech/auth/google/callback"
+    clientID: process.env.GClient_Id,
+    clientSecret: process.env.GClient_Secret,
+    callbackURL: "https://qt.navigators.tech/auth/google/callback"
 },
     function (accessToken, refreshToken, profile, done) {
 
