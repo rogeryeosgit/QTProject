@@ -146,3 +146,5 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 
 31/08/2018
 - Set up SSL for the app
+- Secured app and made sure all http is changed to https
+- Config file helps to save sensitive ids
