@@ -24,8 +24,8 @@ async function getBiblePassage() {
         params: param
     }).then(function (returnedData) {
         // Deal with the returned data from returned json
-        console.log("this is returned Data:" + returnedData.passages);
-        returnPassage = returnedData.passages;
+        console.log("this is returned Data:" + returnedData.passages[1]);
+        returnPassage = returnedData.passages[1];
     }).catch(function (error) {
         console.log(error)
     });
