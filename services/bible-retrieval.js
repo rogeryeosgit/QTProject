@@ -14,19 +14,22 @@ const header = {
 const param = {
     'q': 'John+1'
 };
-
 var returnPassage;
 
-axios.get(BRUrl, {
-    headers: header,
-    params: param
-}).then(function (returnedData) {
-    // Deal with the returned data from returned json
-    console.log("this is returned Data:" + returnedData);
-    returnPassage = returnedData;
-}).catch(function (error) {
-    console.log(error)
-});
+getBiblePassage();
 
-console.log("this is returned Passage" + returnPassage);
-module.exports = returnPassage;
+async function getBiblePassage() {
+    await axios.get(BRUrl, {
+        headers: header,
+        params: param
+    }).then(function (returnedData) {
+        // Deal with the returned data from returned json
+        console.log("this is returned Data:" + returnedData);
+        returnPassage = returnedData;
+    }).catch(function (error) {
+        console.log(error)
+    });
+
+    console.log("this is returned Passage" + returnPassage);
+    module.exports = returnPassage;
+}
