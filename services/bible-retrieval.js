@@ -12,11 +12,11 @@ const header = {
     'Authorization': 'Token ' + process.env.Bible_Key
 };
 const param = {
-    q: 'John+1'
+    'q': 'John+1'
 };
 
 console.log("-- Starting BR Service -- ");
-axios.get(BRUrl, { headers: header }, { params: param }).then(function (returnedData) { console.log(returnedData) }).catch(function (error) { console.log(error) });
+axios.get(BRUrl, { headers: header, params: param }).then(function (returnedData) { console.log(returnedData) }).catch(function (error) { console.log(error) });
 console.log("-- Ending BR Service -- ");
 
 
