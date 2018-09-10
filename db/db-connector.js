@@ -2,7 +2,7 @@ var mongoose = require('mongoose')
 
 // connect to MongoDB
 // mongoose.connect('mongodb://localhost:27017/authProj', {useNewUrlParser: true}); // For local access
-mongoose.connect('mongodb+srv://devoappaccess:vGWhWWtRPR0bgqP0@firstcluster-xno0w.mongodb.net/authProj', {useNewUrlParser: true});
+mongoose.connect(process.env.MongoDb_Connection, {useNewUrlParser: true});
 var db = mongoose.connection;
 
 //handle mongo error

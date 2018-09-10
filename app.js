@@ -45,7 +45,7 @@ app.use(function (req, res, next) {
 // define as the last app.use callback
 app.use(function (err, req, res, next) {
   res.status(err.status || 500);
-  res.send('<head><meta http-equiv="refresh" content="3;url=http://qt.navigators.tech"></head><body><h1>Redirecting you back to login in 3 seconds...</h1><br>' + err.message + "</body>");
+  res.send('<head><meta http-equiv="refresh" content="3;url=https://qt.navigators.tech"></head><body><h1>Redirecting you back to login in 3 seconds...</h1><br>' + err.message + "</body>");
 });
 
 // listen on port 3000
