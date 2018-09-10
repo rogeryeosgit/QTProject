@@ -22,9 +22,11 @@ axios.get(BRUrl, {
     params: param
 }).then(function (returnedData) {
     // Deal with the returned data from returned json
+    console.log("this is returned Data:" + returnedData);
     returnPassage = returnedData;
 }).catch(function (error) {
     console.log(error)
 });
 
+console.log("this is returned Passage" + returnedPassage);
 module.exports = returnPassage;
