@@ -12,7 +12,7 @@ const header = {
     'Authorization': 'Token ' + process.env.Bible_Key
 };
 const param = {
-    'q': 'John+1'
+    q: 'John+1'
 };
 
 console.log("-- Starting BR Service -- ");
