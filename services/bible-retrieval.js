@@ -28,5 +28,5 @@ axios.get(BRUrl, {
     console.log(error)
 });
 
-console.log("this is returned Passage" + returnedPassage);
+console.log("this is returned Passage" + returnPassage);
 module.exports = returnPassage;
