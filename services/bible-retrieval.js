@@ -7,7 +7,7 @@ var axios = require('axios');
 // text: string;
 // }
 
-const BRUrl = 'https://api.esv.org/v3/passage/text/';
+const BRUrl = 'https://api.esv.org/v3/passage/html/';
 const header = {
     'Authorization': 'Token ' + process.env.Bible_Key
 };
@@ -15,12 +15,16 @@ const param = {
     'q': 'John+1'
 };
 
-console.log("-- Starting BR Service -- ");
-axios.get(BRUrl, { headers: header, params: param }).then(function (returnedData) { console.log(returnedData) }).catch(function (error) { console.log(error) });
-console.log("-- Ending BR Service -- ");
+var returnPassage;
 
+axios.get(BRUrl, {
+    headers: header,
+    params: param
+}).then(function (returnedData) {
+    // Deal with the returned data from returned json
+    returnPassage = returnedData;
+}).catch(function (error) {
+    console.log(error)
+});
 
-// let dat = res.json();
-
-module.exports = 'BR Done';
-
+module.exports = returnPassage;
