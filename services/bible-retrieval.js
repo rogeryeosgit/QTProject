@@ -7,7 +7,7 @@ var axios = require('axios');
 // text: string;
 // }
 
-const BRUrl = 'https://api.esv.org/v3/passage/html/';
+const BRUrl = 'https://api.esv.org/v3/passage/text/';
 const header = {
     'Authorization': 'Token ' + process.env.Bible_Key
 };
