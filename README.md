@@ -151,3 +151,4 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 
 10/09/2018
 - Testing API calls with approval
+- So my BR service gets called on deployment, so where exactly do i do async await? Need to wait for return before exporting the BR Retrieval service.
