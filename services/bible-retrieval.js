@@ -18,11 +18,10 @@ async function getBiblePassage() {
     }).then(function (returnedData) {
         // Deal with the returned data from returned json
         console.log(returnedData.data.passages[0]);
-        returnPassage = returnedData;
+        returnPassage = returnedData.data.passages[0];
     }).catch(function (error) {
         console.log(error)
     });
 
-    console.log("this is returned Passage" + returnPassage);
     module.exports = returnPassage;
 }
