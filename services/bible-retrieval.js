@@ -9,12 +9,14 @@ var axios = require('axios');
 
 const BRUrl = 'https://api.esv.org/v3/passage/html/';
 const header = {
-     'Authorization': 'Token ' + process.env.Bible_Key,
-     'q': 'John+1'
-     };
+    'Authorization': 'Token ' + process.env.Bible_Key
+};
+const param = {
+    'q': 'John+1'
+};
 
 console.log("-- Starting BR Service -- ");
-axios.get(BRUrl, { headers: header }).then(function (returnedData) { console.log(returnedData) }).catch(function (error) { console.log(error) });
+axios.get(BRUrl, { headers: header }, { params: param }).then(function (returnedData) { console.log(returnedData) }).catch(function (error) { console.log(error) });
 console.log("-- Ending BR Service -- ");
 
 
