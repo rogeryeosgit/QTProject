@@ -146,3 +146,6 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 
 31/08/2018
 - Set up SSL for the app
+
+10/09/2018
+- Finally got authorization for API, testing
