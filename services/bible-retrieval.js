@@ -9,7 +9,7 @@ const header = {
 var BRService = {
 
     passage: 'John+1',
-    param: {
+    param:{
         'q': passage
     },
     getPassage: async function () {
