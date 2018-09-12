@@ -74,7 +74,7 @@ router.get('/profile', function (req, res, next) {
           return next(err);
         } else {
           try {
-            let p = BRService.getPassage();
+            var p = BRService.getPassage();
           } catch (e) {
             console.log(e);
           }
