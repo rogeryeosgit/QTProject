@@ -5,10 +5,10 @@ const BRUrl = 'https://api.esv.org/v3/passage/html/';
 const header = {
     'Authorization': 'Token ' + process.env.Bible_Key
 };
+var passage = 'John+1';
 
 var BRService = {
 
-    passage: 'John+1',
     param:{
         'q': passage
     },
