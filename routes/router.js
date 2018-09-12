@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../db/User');
 var passport = require('../routes/strategies');
-var brData = require('../services/bible-retrieval');
+var BRService = require('../services/bible-retrieval');
 
 // GET /
 router.get('/', function (req, res, next) {
@@ -73,8 +73,7 @@ router.get('/profile', function (req, res, next) {
           err.status = 400;
           return next(err);
         } else {
-          console.log('This is the bible record data' + brData);
-          return res.send(brData);
+          return res.send(BRService.getPassage);
           // return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
           // return res.redirect('home.html');
         }
