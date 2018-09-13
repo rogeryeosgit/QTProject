@@ -77,7 +77,6 @@ router.get('/profile', function (req, res, next) {
         } else {
           try {
             p = await BRService.getPassage('john+1');
-            console.log("This is the returned data : " + p);
           } catch (err) {
             return next(err);
           }
