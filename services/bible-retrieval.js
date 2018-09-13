@@ -15,6 +15,7 @@ var BRService = {
             }
         }).then(function (returnedData) {
             // Deal with the returned data from returned json
+            console.log("This is what is returned from REST Call : " + returnedData);
             return returnedData.data.passages[0];
         }).catch(function (error) {
             console.log(error)
