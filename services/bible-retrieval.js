@@ -8,20 +8,17 @@ const header = {
 
 var BRService = {
     getPassage: async function (passage) {
-        const returnedData = await axios.get(BRUrl, {
-            headers: header,
-            params: {
-                'q': passage
-            }
-        })
-        return returnedData.data.passages[0];
-        // .then(function (returnedData) {
-        //     // Deal with the returned data from returned json
-        //     console.log("This is what is returned from REST Call : " + returnedData.data.passages[0]);
-        //     return returnedData.data.passages[0];
-        // }).catch(function (error) {
-        //     console.log(error)
-        // });
+        try {
+            const returnedData = await axios.get(BRUrl, {
+                headers: header,
+                params: {
+                    'q': passage
+                }
+            })
+            return returnedData.data.passages[0];
+        } catch (err) {
+            return next(err);
+        }
     }
 };
 

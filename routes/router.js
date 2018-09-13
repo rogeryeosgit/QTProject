@@ -75,12 +75,12 @@ router.get('/profile', function (req, res, next) {
           err.status = 400;
           return next(err);
         } else {
-          // try {
+          try {
             p = await BRService.getPassage('john+1');
             console.log("This is the returned data : " + p);
-          // } catch (e) {
-          //   next(e);
-          // }
+          } catch (err) {
+            return next(err);
+          }
           return res.send(p);
           // return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
           // return res.redirect('home.html');
