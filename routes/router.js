@@ -4,6 +4,8 @@ var User = require('../db/User');
 var passport = require('../routes/strategies');
 var BRService = require('../services/bible-retrieval');
 
+var p = '';
+
 // GET /
 router.get('/', function (req, res, next) {
   return res.send('Set default template path!');
@@ -74,8 +76,8 @@ router.get('/profile', function (req, res, next) {
           return next(err);
         } else {
           try {
-            var p = await BRService.getPassage('john+1');
-            console.log(p);
+            p = await BRService.getPassage('john+1');
+            console.log("This is the returned data : " + p);
           } catch (e) {
             next(e);
           }
