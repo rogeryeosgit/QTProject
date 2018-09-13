@@ -62,7 +62,7 @@ router.post('/', function (req, res, next) {
 });
 
 // GET route after registering
-router.get('/profile', function (req, res, next) {
+router.get('/profile', async function (req, res, next) {
   User.findById(req.session.userId)
     .exec(function (error, user) {
       if (error) {
@@ -74,9 +74,10 @@ router.get('/profile', function (req, res, next) {
           return next(err);
         } else {
           try {
-            var p = BRService.getPassage();
+            var p = await BRService.getPassage('john+1');
+            console.log(p);
           } catch (e) {
-            console.log(e);
+            next(e);
           }
           return res.send(p);
           // return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
