@@ -62,9 +62,9 @@ router.post('/', function (req, res, next) {
 });
 
 // GET route after registering
-router.get('/profile', async function (req, res, next) {
+router.get('/profile', function (req, res, next) {
   User.findById(req.session.userId)
-    .exec(function (error, user) {
+    .exec(async function (error, user) {
       if (error) {
         return next(error);
       } else {
