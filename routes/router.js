@@ -15,7 +15,7 @@ router.get('/register', function (req, res, next) {
   return res.redirect("register.html");
 });
 
-//POST route for updating data
+//POST route for creating new user
 router.post('/', function (req, res, next) {
   // confirm that user typed same password twice
   if (req.body.password !== req.body.passwordConf) {
@@ -41,7 +41,7 @@ router.post('/', function (req, res, next) {
         return next(error);
       } else {
         req.session.userId = user._id;
-        return res.redirect('/profile');
+        return res.redirect('/home');
       }
     });
 
@@ -53,7 +53,7 @@ router.post('/', function (req, res, next) {
         return next(err);
       } else {
         req.session.userId = user._id;
-        return res.redirect('/profile');
+        return res.redirect('/home');
       }
     });
   } else {
@@ -64,7 +64,7 @@ router.post('/', function (req, res, next) {
 });
 
 // GET route after registering
-router.get('/profile', function (req, res, next) {
+router.get('/home', function (req, res, next) {
   User.findById(req.session.userId)
     .exec(async function (error, user) {
       if (error) {
@@ -129,7 +129,7 @@ router.get('/auth/google/callback',
     console.log(" *--- Google Login Successful ---* ")
     console.log("Session UserID : " + req.user.id);
     req.session.userId = req.user.id;
-    res.redirect('/profile');
+    res.redirect('/home');
   });
 
 module.exports = router;

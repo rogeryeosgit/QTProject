@@ -152,3 +152,7 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 10/09/2018
 - Testing API calls with approval
 - So my BR service gets called on deployment, so where exactly do i do async await? Need to wait for return before exporting the BR Retrieval service.
+
+14/09/2018
+- Learning what it means to have a SSR or a SPA https://www.youtube.com/watch?v=9RKX9KFeoDg
+- Trying to understand Vue SSR
