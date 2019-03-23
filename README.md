@@ -156,3 +156,6 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 14/09/2018
 - Learning what it means to have a SSR or a SPA https://www.youtube.com/watch?v=9RKX9KFeoDg
 - Trying to understand Vue SSR
+
+23/03/2019
+- What are best practices to use Express together with Vue frontend
