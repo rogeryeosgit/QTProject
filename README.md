@@ -51,7 +51,9 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 - After not using it for a while, google's legacy person api is deactivated, trying to ractify by updating dependencies
 - Need to implement logging properly, if not public can see errors
 - Check Google Person API usage
-- How does Vue wait for data to arrive from the server? Computed properties?
+- How does Vue wait for data to arrive from the server? Computed properties? 
+- Reading up on vue-server-renderer
+- Ok, need to learn nuxt.js for SSR
 
 23/03/2019
 - What are best practices to use Express together with Vue frontend
