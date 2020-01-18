@@ -48,7 +48,8 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 # Learning Experience
 
 18/01/2020
-- After not using it for a while, google's person api can deactivated, trying to ractify by updating dependencies
+- After not using it for a while, google's legacy person api is deactivated, trying to ractify by updating dependencies
+- Need to implement logging properly, if not public can see errors
 
 23/03/2019
 - What are best practices to use Express together with Vue frontend
