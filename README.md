@@ -48,7 +48,7 @@ https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/
 # Learning Experience
 
 18/01/2020
-- 
+- After not using it for a while, google's person api can deactivated, trying to ractify by updating dependencies
 
 23/03/2019
 - What are best practices to use Express together with Vue frontend
